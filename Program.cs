@@ -26,6 +26,8 @@ namespace TodoApi
                         : Results.NotFound());
 
             // Post Endpoints
+
+            // Data is added to the in-memory database
             app.MapPost("/todoitems", async (Todo todo, TodoDb db) =>
             {
                 db.Todos.Add(todo);
